@@ -1,0 +1,28 @@
+$(document).ready(function() {
+  //Remplacer la classe zcwf_title par uk-form-label
+  $('.zcwf_title').removeClass('zcwf_title').addClass('uk-h3');
+  
+  //Remplacer la classe zcwf_row par uk-margin
+  $('.zcwf_row').removeClass('zcwf_row').addClass('uk-margin');
+  
+  //Remplacer la classe zcwf_col_fld par uk-form-controls
+  $('.zcwf_col_fld').removeClass('zcwf_col_fld');
+  
+  //Remplacer la classe zcwf_col_lab par uk-form-label
+  $('.zcwf_col_lab').removeClass('zcwf_col_lab');
+  
+  //Remplacer la classe zcwf_button par uk-button
+  $('.zcwf_button').removeClass('zcwf_button').addClass('uk-button uk-button-default');
+
+  //Ajouter la classe uk-input à tous les éléments input
+  $('input').addClass('uk-input');
+
+  //Ajouter la classe uk-form-label à tous les éléments label
+  $('label').addClass('uk-form-label');
+
+  // Retirer la classe uk-input des boutons
+  $('input[type="submit"], input[type="reset"]').removeClass('uk-input');
+
+  // Ajouter la classe uk-button-primary au bouton de soumission
+  $('input[type="submit"]').addClass('uk-button-secondary');
+});
