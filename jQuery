@@ -1,28 +1,40 @@
 $(document).ready(function() {
-  //Remplacer la classe zcwf_title par uk-form-label
+  // Remplacer la classe zcwf_title par uk-form-label
   $('.zcwf_title').removeClass('zcwf_title').addClass('uk-h3');
   
-  //Remplacer la classe zcwf_row par uk-margin
+  // Remplacer la classe zcwf_row par uk-margin
   $('.zcwf_row').removeClass('zcwf_row').addClass('uk-margin');
   
-  //Remplacer la classe zcwf_col_fld par uk-form-controls
+  // Remplacer la classe zcwf_col_fld par uk-form-controls
   $('.zcwf_col_fld').removeClass('zcwf_col_fld');
   
-  //Remplacer la classe zcwf_col_lab par uk-form-label
+  // Remplacer la classe zcwf_col_lab par uk-form-label
   $('.zcwf_col_lab').removeClass('zcwf_col_lab');
   
-  //Remplacer la classe zcwf_button par uk-button
+  // Remplacer la classe zcwf_button par uk-button
   $('.zcwf_button').removeClass('zcwf_button').addClass('uk-button uk-button-default');
 
-  //Ajouter la classe uk-input à tous les éléments input
-  $('input').addClass('uk-input');
+  // Ajouter la classe uk-input à tous les éléments input sauf les checkbox
+  $('input:not([type="checkbox"])').addClass('uk-input');
 
-  //Ajouter la classe uk-form-label à tous les éléments label
+  // Ajouter la classe uk-form-label à tous les éléments label
   $('label').addClass('uk-form-label');
 
   // Retirer la classe uk-input des boutons
   $('input[type="submit"], input[type="reset"]').removeClass('uk-input');
 
-  // Ajouter la classe uk-button-primary au bouton de soumission
+  // Ajouter la classe uk-button-secondary au bouton de soumission
   $('input[type="submit"]').addClass('uk-button-secondary');
+
+  // Ajouter la classe uk-padding au bouton de re-paramétrage pour mobile
+  $('.uk-button.uk-input[name="reset"]').addClass('uk-padding');
+
+  // Remplacer la classe zcwf_col_fld_slt par uk-select
+  $('.zcwf_col_fld_slt').removeClass('zcwf_col_fld_slt').addClass('uk-select').attr('id', 'form-stacked-select');
+
+  // Remplacer la classe zcwf_privacy par uk-form-controls et ajouter la classe uk-checkbox à l'élément input de type checkbox
+  $('.zcwf_privacy').removeClass('zcwf_privacy').addClass('uk-form-controls').find('input[type="checkbox"]').removeClass('uk-input').addClass('uk-checkbox');
+
+  // Ajouter la classe uk-text-small à l'élément contenant le texte de la politique de confidentialité et uk-margin-small-left pour ajouter un peu d'espace entre le checkbox et le texte
+  $('.uk-form-controls .zcwf_privacy_txt').removeClass('zcwf_privacy_txt').addClass('uk-text-small uk-margin-small-left');
 });
